@@ -42,4 +42,4 @@ class Board
     index = user_input.to_i-1
     cells[index] = player.token
   end
-end 
+end
