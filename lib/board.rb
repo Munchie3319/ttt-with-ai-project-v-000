@@ -11,10 +11,10 @@ class Board
      end
 
       def display
-         puts " #{cells[0]} | #{cells[1]} | #{cells[2]} ", 
-              "-----------", 
-              " #{cells[3]} | #{cells[4]} | #{cells[5]} ", 
-              "-----------", 
+         puts " #{cells[0]} | #{cells[1]} | #{cells[2]} ",
+              "-----------",
+              " #{cells[3]} | #{cells[4]} | #{cells[5]} ",
+              "-----------",
               " #{cells[6]} | #{cells[7]} | #{cells[8]} "
      end
 
@@ -35,12 +35,12 @@ class Board
      end
 
       def valid_move?(user_input)
-         user_input.to_s.to_i.between?(1, 9) && !taken?(user_input) 
+         user_input.to_s.to_i.between?(1, 9) && !taken?(user_input)
      end
 
       def update(user_input, player)
          index = user_input.to_i-1
-         cells[index] = player.token  
+         cells[index] = player.token
      end
 
   end
