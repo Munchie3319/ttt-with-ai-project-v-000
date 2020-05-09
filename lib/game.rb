@@ -4,12 +4,12 @@ class Game
 
   WIN_COMBINATIONS = [
          [0, 1, 2],
-         [3, 4, 5], 
-         [6, 7, 8], 
-         [0, 3, 6], 
-         [1, 4, 7], 
-         [2, 5, 8], 
-         [0, 4, 8], 
+         [3, 4, 5],
+         [6, 7, 8],
+         [0, 3, 6],
+         [1, 4, 7],
+         [2, 5, 8],
+         [0, 4, 8],
          [2, 4, 6]
      ]
 
@@ -25,9 +25,9 @@ class Game
 
   def won?
     WIN_COMBINATIONS.detect do |win_combo|
-        @board.cells[win_combo[0]] == @board.cells[win_combo[1]] && 
-        @board.cells[win_combo[1]] == @board.cells[win_combo[2]] && 
-        @board.cells[win_combo[0]] == @board.cells[win_combo[2]] && 
+        @board.cells[win_combo[0]] == @board.cells[win_combo[1]] &&
+        @board.cells[win_combo[1]] == @board.cells[win_combo[2]] &&
+        @board.cells[win_combo[0]] == @board.cells[win_combo[2]] &&
         (@board.cells[win_combo[0]] == "X" || @board.cells[win_combo[0]] == "O")
       end
     end
@@ -54,11 +54,11 @@ class Game
        @board.display
      elsif board.valid_move?(input) == false
        puts "That is an invalid move"
-       turn 
+       turn
      end
    end
 
-   def play 
+   def play
      @board.display
      until over?
        turn
