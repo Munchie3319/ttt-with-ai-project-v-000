@@ -1,8 +1,8 @@
-class Player 
+class Player
   attr_accessor :token
 
   def initialize(token = "X" || "O")
-    @token = token 
+    @token = token
   end
 
   def token
